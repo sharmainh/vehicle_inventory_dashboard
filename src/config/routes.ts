@@ -5,7 +5,7 @@ import Inventory from '../pages/Inventory'
 interface RouteType {
     path: string,
     component: () => JSX.Element,
-    name: string
+    name: string,
 }
 
 const routes: RouteType[] = [

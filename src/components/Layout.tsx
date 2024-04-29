@@ -64,6 +64,7 @@ function Layout() {
                                 </Link>
                             </div>
                         </Button>
+                        { isAuthenticated ? (
                         <Button className='p-3 m-5 bg-black justify-center bttn'>
                             <div>
                                 <Link to='/dashboard' onClick={ clicked} 
@@ -75,8 +76,10 @@ function Layout() {
                                 </Link>
                             </div>
                         </Button>
-                        {
-                            !isAuthenticated ? 
+                         ) : (
+                            <></> // If user is not authenticated, don't render the Dashboard link
+                        )}
+                        { !isAuthenticated ? 
                             <Button className='p-3 m-5 bg-black justify-center bttn'>
                                 <div>
                                     <Link to="/" onClick={signInOnClick} 
@@ -89,12 +92,12 @@ function Layout() {
                                 </div>
                             </Button>
                             :
-                            <Button className='p-3 m-5 bg-teal-400 justify-center'>
+                            <Button className='p-3 m-5 bg-black justify-center bttn'>
                                 <div>
                                     <Link to="/" onClick={signOutOnClick} 
-                                    className='flex place-items-center mt-4 
-                                    lg:inline-block lg:mt-0 text-teal-200
-                                     hover:text-white bttn'
+                                    className='flex place-items-center mt-4 mr-2 
+                                    lg:inline-block lg:mt-0 text-indigo-200
+                                     hover:text-white'
                                      >
                                         Sign Out
                                     </Link>

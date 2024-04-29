@@ -1,5 +1,4 @@
 import Button from "./Button"
-import { useSubmit } from "react-router-dom"
 import Input from "./Input"
 import { useForm } from 'react-hook-form'
 import { server_calls } from "../api/server"
@@ -23,7 +22,7 @@ const VehicleForm = ( props:VehicleFormProps ) => {
     if (props.id && props.id.length > 0) {
       server_calls.update(props.id[0], data)
       console.log(`Updated: ${data.model} ${ props.id }`)
-      setTimeout(() => {window.location.reload()}, 5000);
+      setTimeout(() => {window.location.reload()}, 500);
       event.target.reset()
     } else {
       dispatch(chooseMake(data.make));
