@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import routes from "./config/routes";
 import Layout from "./components/Layout";
 import { Provider } from 'react-redux';
@@ -16,10 +16,10 @@ import { auth0Config } from './config/auth0.config';
       }}
     >
      
-      <BrowserRouter>
-      <Layout />
-      <Provider store={store}>
-        <Routes>
+      <HashRouter>
+        <Layout />
+        <Provider store={store}>
+          <Routes>
           { routes.map((route: any, index: any) => (
             <Route
               key={index}
@@ -29,9 +29,9 @@ import { auth0Config } from './config/auth0.config';
               }
               />
           )) }
-        </Routes>
-      </Provider>
-      </BrowserRouter>
+          </Routes>
+        </Provider>
+      </HashRouter>
       </Auth0Provider>
       );
     }
