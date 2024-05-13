@@ -88,11 +88,8 @@ function DataTable() {
                   }}
                 onRowSelectionModelChange={ (item:any) => {
                     setSelectionModel(item)
-                }}
-                
-                
+                }}   
             />
-    
     </div> 
     </>
       

@@ -38,16 +38,6 @@ const Modal = ( props: Props ) => {
             </div>
         </div>
             
-               
-        //     >
-        //      
-        //             </div>
-        //             <div className="flex flex-col items-center text-center mt-3 p-2">
-        //                 <VehicleForm id={props.id } onClose={props.onClose}/>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

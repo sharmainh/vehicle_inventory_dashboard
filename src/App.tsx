@@ -15,7 +15,6 @@ import { auth0Config } from './config/auth0.config';
         redirect_uri: window.location.origin
       }}
     >
-     
       <HashRouter>
         <Layout />
         <Provider store={store}>

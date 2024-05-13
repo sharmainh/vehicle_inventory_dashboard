@@ -37,10 +37,6 @@ function Inventory() {
             <img src={volvo} className="h-72 w-96 rounded-lg " alt="Your Image"/>
         </div>
     </div>
-    
- 
-  
-  
   </>
   )
 }
